@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>deals</title>
+</head>
+<body>
+    {% for name in names%}
+    {% if (name[1]!='' and name[3]!='') and name[1]>name[3] %}
+    <p>{{name[0]}} <a href="{{name[4]}}">{{name[3]}}</a></p>
+    {% elif (name[1]!='' and name[3]!='') and name[1]>name[3] %}
+    <p>{{name[0]}} <a href="{{name[2]}}">{{name[1]}}</a></p>
+    {% else %}
+    {% if name[1] ==''%}
+    <p>{{name[0]}} <a href="{{name[4]}}">{{name[3]}}</a></p>
+    {% else %}
+    <p>{{name[0]}} <a href="{{name[2]}}">{{name[1]}}</a></p>
+    {%endif%}
+    {% endif %}
+    {% endfor %}
+</body>
+</html>
