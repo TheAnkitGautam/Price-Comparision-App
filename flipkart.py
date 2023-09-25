@@ -3,7 +3,12 @@ from requests_html import HTMLSession
 from bs4 import BeautifulSoup#_21lJbe
 # from amazonscrape import mai
 import sqlite3
-conn=sqlite3.connect('laptop.db')
+import os.path
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+db_path = os.path.join(BASE_DIR, "laptop.db")
+print(db_path)
+conn=sqlite3.connect(db_path)
+
 c=conn.cursor()
 conn.commit()
 # print()
